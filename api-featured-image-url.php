@@ -11,7 +11,7 @@
  * Plugin Name:       API Featured Image Url
  * Plugin URI:        https://switchwebdev.com/wordpress-plugins/
  * Description:       This will add the featured image src url to the WP Rest API (needed to work with apps like zapier etc).
- * Version:           0.1.3
+ * Version:           0.1.4
  * Requires at least: 3.4
  * Requires PHP:      5.6
  * Author:            SwitchWebdev.com
@@ -27,7 +27,7 @@
 	 }
 
  # plugin directory
-	 define("EVP_VERSION", '0.1.3');
+	 define("EVP_VERSION", '0.1.4');
 
  # plugin directory
 	 define("EVP_APIFI", dirname(__FILE__));
@@ -36,7 +36,11 @@
 	 define("EVP_APIFI", plugins_url( "/",__FILE__ ));
 
 
-
+/**
+ * add post featured image src
+ * @var [type]
+ * @link https://developer.wordpress.org/reference/functions/register_rest_field/
+ */
 add_action( 'rest_api_init', function () {
 	 register_rest_field( 'post', 'featured_image_src', array(
 			 'get_callback' => function ( $post_arr ) {
