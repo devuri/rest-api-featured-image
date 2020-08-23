@@ -39,7 +39,7 @@
 	/**
  	 * Load the class
  	 */
- 	require_once plugin_dir_path( __FILE__ ) . 'src/class-featured-image-src.php';
+ 	require_once plugin_dir_path( __FILE__ ) . 'src/class-add-featured-image-src.php';
 
 	/**
 	 * initialize Add_Featured_Image_Src
