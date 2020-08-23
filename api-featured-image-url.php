@@ -21,34 +21,32 @@
  * License:           GPLv2
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
- # deny direct access
-	 if ( ! defined( 'WPINC' ) ) {
-		 die;
-	 }
 
- # plugin directory
-	 define("EVP_VERSION", '0.1.4');
+ 	# deny direct access
+	if ( ! defined( 'WPINC' ) ) {
+		die;
+	}
 
- # plugin directory
-	 define("EVP_APIFI", dirname(__FILE__));
+ 	# plugin directory
+	define("EVP_VERSION", '0.1.4');
 
- # plugin url
-	 define("EVP_APIFI", plugins_url( "/",__FILE__ ));
+ 	# plugin directory
+	define("EVP_APIFI", dirname(__FILE__));
 
+ 	# plugin url
+	define("EVP_APIFI", plugins_url( "/",__FILE__ ));
 
-/**
- * add post featured image src
- * @var [type]
- * @link https://developer.wordpress.org/reference/functions/register_rest_field/
- */
-add_action( 'rest_api_init', function () {
-	 register_rest_field( 'post', 'featured_image_src', array(
-			 'get_callback' => function ( $post_arr ) {
-					 $image_src_arr = wp_get_attachment_image_src( $post_arr['featured_media'] , 'large' );
+	/**
+ 	 * Load the class
+ 	 */
+ 	require_once plugin_dir_path( __FILE__ ) . 'src/class-featured-image-src.php';
 
-					 return $image_src_arr[0];
-			 },
-			 'update_callback' => null,
-			 'schema' => null
-	 ) );
-} );
+	/**
+	 * initialize Add_Featured_Image_Src
+	 */
+ 	$src_field = new SwitchWebdev\Add_Featured_Image_Src();
+
+	/**
+	 * add the src url field
+	 */
+	$src_field->add_src_field();
