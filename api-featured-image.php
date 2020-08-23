@@ -28,13 +28,13 @@
 	}
 
  	# plugin directory
-	define("EVP_VERSION", '0.2.1');
+	define("WFIM_VERSION", '0.2.1');
 
  	# plugin directory
-	define("EVP_APIFI", dirname(__FILE__));
+	define("WFIM_APIFI", dirname(__FILE__));
 
  	# plugin url
-	define("EVP_APIFI", plugins_url( "/",__FILE__ ));
+	define("WFIM_APIFI", plugins_url( "/",__FILE__ ));
 
 	/**
  	 * Load the class
