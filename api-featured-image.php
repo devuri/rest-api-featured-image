@@ -1,14 +1,14 @@
 <?php
 /**
- * API Featured Image Url
+ * API Featured Image
  *
- * @package           APIFeaturedImageUrl
+ * @package           APIFeaturedImage
  * @author            Uriel Wilson
  * @copyright         2020 Uriel Wilson
  * @license           GPL-2.0
  *
  * @wordpress-plugin
- * Plugin Name:       API Featured Image Url
+ * Plugin Name:       WP API Featured Image
  * Plugin URI:        https://switchwebdev.com/wordpress-plugins/
  * Description:       This will add the featured image src url to the WP Rest API (needed to work with apps like zapier etc).
  * Version:           0.2.1
