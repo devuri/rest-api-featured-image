@@ -11,7 +11,7 @@
  * Plugin Name:       WP API Featured Image
  * Plugin URI:        https://switchwebdev.com/wordpress-plugins/
  * Description:       This will add the featured image src url to the WP Rest API (needed to work with apps like zapier etc).
- * Version:           0.2.2
+ * Version:           0.2.3
  * Requires at least: 3.4
  * Requires PHP:      5.6
  * Author:            SwitchWebdev.com
@@ -28,7 +28,7 @@
 	}
 
  	# plugin directory
-	define("APIFI_VERSION", '0.2.2');
+	define("APIFI_VERSION", '0.2.3');
 
  	# plugin directory
 	define("APIFI_DIR", dirname(__FILE__));
