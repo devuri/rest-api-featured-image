@@ -1,8 +1,8 @@
 <?php
 /**
- * API Featured Image
+ * WP API Featured Media Source
  *
- * @package           APIFeaturedImage
+ * @package           WPFeaturedMediaSource
  * @author            Uriel Wilson
  * @copyright         2020 Uriel Wilson
  * @license           GPL-2.0
@@ -40,6 +40,19 @@
    * Load composer
    */
   require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+
+#  -----------------------------------------------------------------------------
+
+	/**
+   * setup options on activation
+   */
+  register_activation_hook( __FILE__, 'wpfms_activation' );
+  function wpfms_activation() {
+    $wpfeaturedmedia = array();
+    update_option('wpfeatured_media_src_post_types', $wpfeaturedmedia );
+  }
+
+#  -----------------------------------------------------------------------------
 
 	/**
    * setup the admin page
