@@ -1,0 +1,10 @@
+{
+    "autoload": {
+      "psr-4": {
+        "SimFeaturedMediaSrc\\":"src"
+      }
+    },
+    "config": {
+    "optimize-autoloader": true
+    }
+}
