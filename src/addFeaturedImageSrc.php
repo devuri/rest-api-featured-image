@@ -1,11 +1,11 @@
 <?php
 
-namespace SwitchWebdev;
+namespace SimFeaturedMediaSrc;
 
 /**
  *
  */
-class Add_Featured_Image_Src
+class addFeaturedImageSrc
 {
 
 	/**
@@ -28,8 +28,8 @@ class Add_Featured_Image_Src
 	 * @param string 	$size size of the featured image
 	 */
 	public function __construct( $types = array() , $size = 'thumbnail' ){
-		$this->image_size = $size;
 		$this->post_types = $types;
+		$this->image_size = $size;
 	}
 
 	/**
@@ -59,6 +59,7 @@ class Add_Featured_Image_Src
 	 */
 	public function add_src_field(){
 
+		// get post types and add featured media to each
 		foreach ( $this->get_post_types() as $post_type ) {
 			add_action( 'rest_api_init', function() use ( $post_type ) {
 			    register_rest_field( $post_type , 'featured_media_src_url', array(
@@ -72,22 +73,7 @@ class Add_Featured_Image_Src
 			    );
 			}, 99 );
 		}
+
 	}
 
-	// /**
-	//  * setup the featured image src field
-	//  * @return [type] [description]
-	//  * @link https://developer.wordpress.org/reference/functions/register_rest_field/
-	//  */
-	// public function featured_image_src_field() {
-	//     register_rest_field( 'post', 'featured_media_src_url', array(
-	//           'get_callback' => function ( $post ) {
-	// 							$image_src = $this->get_media( $post['featured_media'] );
-	// 					 		return $image_src[0];
-	// 					  	},
-	// 					'update_callback' => null,
-	// 					'schema' => null
-	//         )
-	//     );
-	// }
 }
