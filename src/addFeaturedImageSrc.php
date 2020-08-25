@@ -64,16 +64,29 @@ class addFeaturedImageSrc
 			add_action( 'rest_api_init', function() use ( $post_type ) {
 			    register_rest_field( $post_type , 'featured_media_src_url', array(
 			          'get_callback' => function ( $post ) {
-										$image_src = $this->get_media( $post['featured_media'] );
-								 		return $image_src[0];
-								  	},
+								 	return $this->featured_media_src( $post );
+								  },
 								'update_callback' => null,
 								'schema' => null
 			        )
 			    );
 			}, 99 );
 		}
+	}
 
+	/**
+	 * featured_media_src()
+	 *
+	 * check if there is featured_media and if not return null
+	 * @param  [type] $post [description]
+	 * @return [type]       [description]
+	 */
+	private function featured_media_src( $post = null ){
+		if ( array_key_exists('featured_media', $post) ) {
+			$media_src = $this->get_media( $post['featured_media'] );
+			return $media_src[0];
+		}
+		return null;
 	}
 
 }
