@@ -56,6 +56,7 @@
   $excludedtypes = array();
   $excludedtypes[] = 'elementor_library';
   $excludedtypes[] = 'elementor-hf';
+  $excludedtypes[] = 'attachment';
 
 
   /**
