@@ -11,6 +11,11 @@ class addFeaturedImageSrc
 	/**
 	 * set the featured image size
 	 *
+	 * 'thumbnail'  Thumbnail (Note: different to Post Thumbnail)
+	 * 'medium'     Medium resolution
+	 * 'large'      Large resolution
+	 * 'full'       Original resolution
+	 *
 	 * @var string $image_size
 	 */
 	private $image_size;
@@ -81,8 +86,9 @@ class addFeaturedImageSrc
 	 * @param  [type] $post [description]
 	 * @return [type]       [description]
 	 */
-	private function featured_media_src( $post = null ){
-		if ( array_key_exists('featured_media', $post) ) {
+	private function featured_media_src( $post = null ) {
+		$media = array_key_exists('featured_media', $post);
+		if ( $media ) {
 			$media_src = $this->get_media( $post['featured_media'] );
 			return $media_src[0];
 		}
