@@ -19,7 +19,7 @@
   }
 
   # delete settings in the options table.
-  delete_option('wpfeatured_media_src_post_types');
+  delete_option('wpfms_post_types');
 
 
   //finally clear the cache
