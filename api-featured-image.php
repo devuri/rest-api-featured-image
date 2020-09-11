@@ -46,11 +46,10 @@
 	/**
    * setup options on activation
    */
-  register_activation_hook( __FILE__, 'wpfms_activation' );
-  function wpfms_activation() {
+  register_activation_hook( __FILE__, function () {
     $wpfeaturedmedia = array();
     update_option('wpfeatured_media_src_post_types', $wpfeaturedmedia );
-  }
+  });
 
 #  -----------------------------------------------------------------------------
 
@@ -65,7 +64,11 @@
 	 *
 	 * TODO add option to change the image size for output ('thumbnail', 'medium', 'large' , 'full')
 	 */
- 	$src_field = new SimFeaturedMediaSrc\addFeaturedImageSrc( get_option('wpfeatured_media_src_post_types') , 'large'  );
+ 	$src_field = new SimFeaturedMediaSrc\addFeaturedImageSrc(
+		get_option('wpfeatured_media_src_post_types'),
+		//get_option('wpfms_post_types'),
+		'large'
+	);
 
 	/**
 	 * add the src url field
