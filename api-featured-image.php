@@ -11,7 +11,7 @@
  * Plugin Name:       WP API Featured Media Source
  * Plugin URI:        https://switchwebdev.com/wordpress-plugins/
  * Description:       This plugin will add the featured image src url field to the WordPress Rest API.
- * Version:           0.6.1
+ * Version:           0.6.3
  * Requires at least: 3.4
  * Requires PHP:      5.6
  * Author:            SwitchWebdev.com
@@ -28,7 +28,7 @@
 	}
 
  	# plugin directory
-	define("APIFI_VERSION", '0.6.1');
+	define("APIFI_VERSION", '0.6.3');
 
  	# plugin directory
 	define("APIFI_DIR", dirname(__FILE__));
@@ -46,11 +46,10 @@
 	/**
    * setup options on activation
    */
-  register_activation_hook( __FILE__, 'wpfms_activation' );
-  function wpfms_activation() {
+  register_activation_hook( __FILE__, function () {
     $wpfeaturedmedia = array();
-    update_option('wpfeatured_media_src_post_types', $wpfeaturedmedia );
-  }
+    update_option('wpfms_post_types', $wpfeaturedmedia );
+  });
 
 #  -----------------------------------------------------------------------------
 
@@ -65,7 +64,10 @@
 	 *
 	 * TODO add option to change the image size for output ('thumbnail', 'medium', 'large' , 'full')
 	 */
- 	$src_field = new SimFeaturedMediaSrc\addFeaturedImageSrc( get_option('wpfeatured_media_src_post_types') , 'large'  );
+ 	$src_field = new SimFeaturedMediaSrc\addFeaturedImageSrc(
+		get_option('wpfms_post_types'),
+		'large'
+	);
 
 	/**
 	 * add the src url field

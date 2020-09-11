@@ -16,7 +16,7 @@
      */
     if ( ! isset( $_POST['postype_name'] ) ) {
       $wpfeaturedtypes = array();
-      update_option('wpfeatured_media_src_post_types', $wpfeaturedtypes );
+      update_option('wpfms_post_types', $wpfeaturedtypes );
       echo $this->form()->user_feedback(' Updated <strong>No Post Types Have Been Set</strong> !!!', 'warning');
     } else {
       // sanitize
@@ -24,7 +24,7 @@
         $wpfeaturedtypes[$pkey] = sanitize_text_field($post_type);
       }
       // update and provide feedback
-  	  update_option('wpfeatured_media_src_post_types', $wpfeaturedtypes );
+  	  update_option('wpfms_post_types', $wpfeaturedtypes );
   		echo $this->form()->user_feedback('Post Types Have Been Updated !!!');
     }
 
@@ -70,7 +70,7 @@
      *  checked or not
      * @var [type]
      */
-  if ( in_array($post_type->name,get_option('wpfeatured_media_src_post_types') )) {
+  if ( in_array($post_type->name,get_option('wpfms_post_types') )) {
     $checkpostype   = 'checked';
     $featuredmedia  = 'featured_media_src_url';
     $ptype_status   = 'style=" background-color: #dff0d8;border-color: #d6e9c6;color: #4B8A3B; padding: 8px;border-bottom: solid thin;"';
