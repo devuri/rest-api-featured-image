@@ -37,7 +37,7 @@ final class FeaturedMediaSrcAdmin extends AdminPage {
 
   /**
    * submenu items
-   * @return [type] [description]
+   * @return array [description]
    */
   private static function submenu(){
     $menu = array();
@@ -48,7 +48,7 @@ final class FeaturedMediaSrcAdmin extends AdminPage {
 
   /**
    * init
-   * @return [type] [description]
+   * @return FeaturedMediaSrcAdmin [description]
    */
   public static function init(){
     return new FeaturedMediaSrcAdmin(self::menu(),self::submenu());
