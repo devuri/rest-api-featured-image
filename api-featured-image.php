@@ -8,7 +8,7 @@
  * @license           GPL-2.0
  *
  * @wordpress-plugin
- * Plugin Name:       WP API Featured Media Source
+ * Plugin Name:       WP REST API Featured Media Source
  * Plugin URI:        https://switchwebdev.com/wordpress-plugins/
  * Description:       This plugin will add the featured image src url field to the WordPress Rest API.
  * Version:           0.6.3
@@ -43,21 +43,22 @@
 
 #  -----------------------------------------------------------------------------
 
-	/**
-   * setup options on activation
-   */
-  register_activation_hook( __FILE__, function () {
-    $wpfeaturedmedia = array();
-    update_option('wpfms_post_types', $wpfeaturedmedia );
-  });
+  	/**
+  	 * setup options on activation
+  	 *
+  	 * @var [type]
+  	 */
+	register_activation_hook( __FILE__, function () {
+	   update_option( 'wpfms_post_types' , array() );
+	});
 
 #  -----------------------------------------------------------------------------
 
 	/**
-   * setup the admin page
-   * @var [type]
-   */
-  SimFeaturedMediaSrc\Admin\FeaturedMediaSrcAdmin::init();
+	 * setup the admin page
+	 *
+	 */
+  	SimFeaturedMediaSrc\Admin\FeaturedMediaSrcAdmin::init();
 
 	/**
 	 * initialize Add_Featured_Image_Src
