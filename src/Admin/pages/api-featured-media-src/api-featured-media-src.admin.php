@@ -65,20 +65,19 @@
    */
   foreach ( $getpost_types  as $post_type ) {
 
-
     /**
      *  checked or not
      * @var [type]
      */
-  if ( in_array($post_type->name,get_option('wpfms_post_types') )) {
-    $checkpostype   = 'checked';
-    $featuredmedia  = 'featured_media_src_url';
-    $ptype_status   = 'style=" background-color: #dff0d8;border-color: #d6e9c6;color: #4B8A3B; padding: 8px;border-bottom: solid thin;"';
-  } else {
-    $checkpostype   = '';
-    $featuredmedia  = '';
-    $ptype_status   = 'style=" background-color: #F5F5F5;color: #555555; padding: 8px;"';
-  }
+	if ( in_array( $post_type->name , get_option('wpfms_post_types', array() ) ) ) {
+		$checkpostype   = 'checked';
+		$featuredmedia  = 'featured_media_src_url';
+		$ptype_status   = 'style=" background-color: #dff0d8;border-color: #d6e9c6;color: #4B8A3B; padding: 8px;border-bottom: solid thin;"';
+	} else {
+		$checkpostype   = '';
+		$featuredmedia  = '';
+		$ptype_status   = 'style=" background-color: #F5F5F5;color: #555555; padding: 8px;"';
+	}
 
   /**
    * exclude
@@ -99,7 +98,6 @@
     echo '</label>';
     echo '</div>';
   }
-
 
   } // end foreach
   echo '<p/>';
