@@ -83,8 +83,7 @@ class addFeaturedImageSrc
 	 * featured_media_src()
 	 *
 	 * check if there is featured_media and if not return null
-	 * @param  [type] $post [description]
-	 * @return [type]       [description]
+	 * @param $post
 	 */
 	private function featured_media_src( $post = null ) {
 		$media = array_key_exists('featured_media', $post);

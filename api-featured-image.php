@@ -1,14 +1,14 @@
 <?php
 /**
- * WP API Featured Media Source
+ * REST API Featured Image
  *
- * @package           WPFeaturedMediaSource
+ * @package           APIFeaturedImage
  * @author            Uriel Wilson
  * @copyright         2020 Uriel Wilson
  * @license           GPL-2.0
  *
  * @wordpress-plugin
- * Plugin Name:       WP REST API Featured Media Source
+ * Plugin Name:       REST API Featured Image
  * Plugin URI:        https://switchwebdev.com/wordpress-plugins/
  * Description:       This plugin will add the featured image src url field to the WordPress Rest API.
  * Version:           0.6.4
@@ -37,16 +37,15 @@
 	define("APIFI_URL", plugins_url( "/",__FILE__ ));
 
 	/**
-   * Load composer
-   */
-  require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+	 * Load composer
+	 */
+	require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
-#  -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
   	/**
   	 * setup options on activation
   	 *
-  	 * @var [type]
   	 */
 	register_activation_hook( __FILE__, function () {
 	   update_option( 'wpfms_post_types' , array() );
