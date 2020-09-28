@@ -1,17 +1,17 @@
 <?php
 /**
- * WP API Featured Media Source
+ * REST API Featured Image
  *
- * @package           WPFeaturedMediaSource
+ * @package           APIFeaturedImage
  * @author            Uriel Wilson
  * @copyright         2020 Uriel Wilson
  * @license           GPL-2.0
  *
  * @wordpress-plugin
- * Plugin Name:       WP API Featured Media Source
+ * Plugin Name:       REST API Featured Image
  * Plugin URI:        https://switchwebdev.com/wordpress-plugins/
  * Description:       This plugin will add the featured image src url field to the WordPress Rest API.
- * Version:           0.6.3
+ * Version:           0.6.4
  * Requires at least: 3.4
  * Requires PHP:      5.6
  * Author:            SwitchWebdev.com
@@ -28,7 +28,7 @@
 	}
 
  	# plugin directory
-	define("APIFI_VERSION", '0.6.3');
+	define("APIFI_VERSION", '0.6.4');
 
  	# plugin directory
 	define("APIFI_DIR", dirname(__FILE__));
@@ -37,27 +37,27 @@
 	define("APIFI_URL", plugins_url( "/",__FILE__ ));
 
 	/**
-   * Load composer
-   */
-  require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+	 * Load composer
+	 */
+	require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+
+# -----------------------------------------------------------------------------
+
+  	/**
+  	 * setup options on activation
+  	 *
+  	 */
+	register_activation_hook( __FILE__, function () {
+	   update_option( 'wpfms_post_types' , array() );
+	});
 
 #  -----------------------------------------------------------------------------
 
 	/**
-   * setup options on activation
-   */
-  register_activation_hook( __FILE__, function () {
-    $wpfeaturedmedia = array();
-    update_option('wpfms_post_types', $wpfeaturedmedia );
-  });
-
-#  -----------------------------------------------------------------------------
-
-	/**
-   * setup the admin page
-   * @var [type]
-   */
-  SimFeaturedMediaSrc\Admin\FeaturedMediaSrcAdmin::init();
+	 * setup the admin page
+	 *
+	 */
+  	SimFeaturedMediaSrc\Admin\FeaturedMediaSrcAdmin::init();
 
 	/**
 	 * initialize Add_Featured_Image_Src

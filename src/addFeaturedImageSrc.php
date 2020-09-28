@@ -69,10 +69,10 @@ class addFeaturedImageSrc
 			add_action( 'rest_api_init', function() use ( $post_type ) {
 			    register_rest_field( $post_type , 'featured_media_src_url', array(
 			          'get_callback' => function ( $post ) {
-								 	return $this->featured_media_src( $post );
+									return $this->featured_media_src( $post );
 								  },
-								'update_callback' => null,
-								'schema' => null
+						'update_callback' => null,
+						'schema' => null
 			        )
 			    );
 			}, 99 );
@@ -83,8 +83,7 @@ class addFeaturedImageSrc
 	 * featured_media_src()
 	 *
 	 * check if there is featured_media and if not return null
-	 * @param  [type] $post [description]
-	 * @return [type]       [description]
+	 * @param $post
 	 */
 	private function featured_media_src( $post = null ) {
 		$media = array_key_exists('featured_media', $post);
