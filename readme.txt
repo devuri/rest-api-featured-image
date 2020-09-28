@@ -1,9 +1,9 @@
 === REST API Featured Image ===
 Contributors: icelayer
-Donate link: https://switchwebdev.com/
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6D6W2KXB88NKE
 Tags: rest, rest-api, api, json, featured image, post, thumbnail
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 5.5
 Stable tag: trunk
 Requires PHP: 5.6
 License: GPLv2 or later
