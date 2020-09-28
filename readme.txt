@@ -15,11 +15,14 @@ This plugin will add the featured image src URL field to the WordPress Rest API.
 
 This Plugin will add a top-level featured image src field with the featured image src URL.
 
-If you need to get a featured image from the WordPress REST API. This is a very simple plugin that will help. The featured image Post type can be set in the admin section, where you can choose to enable or disable for specific post types.
+If you need to get a featured image from the WordPress REST API. This is a very simple plugin that will help.
+
+Get the featured image without making an additional request, this will add direct access to the Featured Image URL.
+
+The featured image Post type can be set in the admin section, where you can choose to enable or disable for specific post types.
 
 REST API Featured Image Field:
 `featured_media_src_url`
-
 
 == Installation ==
 
