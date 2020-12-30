@@ -67,8 +67,3 @@
 		get_option( 'wpfms_post_types', array() ),
 		'large'
 	))->add_src_field();
-
-	/**
-	 * Add the src url field
-	 */
-	//$src_field->add_src_field();
