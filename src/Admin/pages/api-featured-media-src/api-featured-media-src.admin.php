@@ -90,7 +90,7 @@
 		     */
 		    echo '<div ' . esc_attr( $ptype_status ) . ' id="ppt_wrap ' . esc_attr( $post_type->name ) . '" >';
 		    echo '<span ' . esc_attr( $dashicon_style ) . ' class="wp-menu-image wll-small-admin-dashicons ' . esc_attr( $post_type->menu_icon ) . '"></span>';
-		    echo '<input type="checkbox" name="postype_name[' . esc_attr( $post_type->name ) . ']" value="' . esc_attr( $post_type->name ) . '" ' . esc_attr( $checkpostype ) . '>';
+		    echo ' <input type="checkbox" name="postype_name[' . esc_attr( $post_type->name ) . ']" value="' . esc_attr( $post_type->name ) . '" ' . esc_attr( $checkpostype ) . '>';
 		    echo '<label for="' . esc_attr( $post_type->name ) . '">';
 		    echo $post_type->labels->singular_name . ' <span style="font-size: smaller;color: #a59b9b;"> ' . esc_attr( $post_type->name ) . '</span> <span style="color: #4b8a3b;">' . esc_attr( $featuredmedia ) . ' </span>';
 		    echo '</label>';
@@ -106,5 +106,15 @@
 	echo $this->form()->submit_button( 'Save Post Types', 'primary large', 'update_postype' );
     ?>
 </form>
-<br/>
+
+<hr/>
+REST API Endpoint:
+<a href="<?php echo esc_url( home_url( '/wp-json/wp/v2/posts' ) ); ?>" target="_blank">
+	<?php echo esc_url( home_url( '/wp-json/wp/v2/posts' ) ); ?>
+</a>
+<br>
+The WordPress REST API Developer Endpoint
+<a target="_blank" href="<?php echo esc_url( 'https://developer.wordpress.org/rest-api/reference/#rest-api-developer-endpoint-reference' ); ?>">
+	Reference
+</a>
 </div><!--frmwrap-->
