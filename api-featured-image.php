@@ -11,8 +11,8 @@
  * Plugin Name:       REST API Featured Image
  * Plugin URI:        https://switchwebdev.com/wordpress-plugins/
  * Description:       This plugin will add the featured image src url field to the WordPress Rest API.
- * Version:           0.6.8
- * Requires at least: 3.4
+ * Version:           0.7.1
+ * Requires at least: 4.7.0
  * Requires PHP:      5.6
  * Author:            SwitchWebdev.com
  * Author URI:        https://switchwebdev.com
@@ -28,7 +28,7 @@
 	}
 
 	// plugin directory.
-	define( 'APIFI_VERSION', '0.6.8' );
+	define( 'APIFI_VERSION', '0.7.1' );
 
 	// plugin directory.
 	define( 'APIFI_DIR', dirname( __FILE__ ) );
@@ -63,12 +63,7 @@
 	 *
 	 * TODO add option to change the image size for output ('thumbnail', 'medium', 'large' , 'full')
 	 */
- 	$src_field = new SimFeaturedMediaSrc\addFeaturedImageSrc(
-		get_option( 'wpfms_post_types' ),
+ 	(new SimFeaturedMediaSrc\addFeaturedImageSrc(
+		get_option( 'wpfms_post_types', array() ),
 		'large'
-	);
-
-	/**
-	 * Add the src url field
-	 */
-	$src_field->add_src_field();
+	))->add_src_field();
