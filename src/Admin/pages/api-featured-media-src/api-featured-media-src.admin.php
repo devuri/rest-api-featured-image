@@ -106,15 +106,14 @@
 	echo $this->form()->submit_button( 'Save Post Types', 'primary large', 'update_postype' );
     ?>
 </form>
-
 <hr/>
 REST API Endpoint:
 <a href="<?php echo esc_url( home_url( '/wp-json/wp/v2/posts' ) ); ?>" target="_blank">
 	<?php echo esc_url( home_url( '/wp-json/wp/v2/posts' ) ); ?>
 </a>
 <br>
-The WordPress REST API Developer Endpoint
+The WordPress REST API
 <a target="_blank" href="<?php echo esc_url( 'https://developer.wordpress.org/rest-api/reference/#rest-api-developer-endpoint-reference' ); ?>">
-	Reference
+	Developer Endpoint Reference
 </a>
 </div><!--frmwrap-->
