@@ -14,8 +14,8 @@
  * Version:           0.7.3
  * Requires at least: 4.7.0
  * Requires PHP:      5.6
- * Author:            SwitchWebdev.com
- * Author URI:        https://switchwebdev.com
+ * Author:            Uriel Wilson
+ * Author URI:        https://urielwilson.com
  * Text Domain:       api-featured-image
  * Domain Path:       languages
  * License:           GPLv2
