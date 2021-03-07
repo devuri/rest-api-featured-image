@@ -62,15 +62,17 @@ class addFeaturedImageSrc // @codingStandardsIgnoreLine
 	 */
 	public function add_src_field() {
 
-		// get post types and add featured media to each.
+		/**
+		 * get post types and add featured media to each.
+		 */
 		foreach ( $this->get_post_types() as $post_type ) {
 			add_action( 'rest_api_init', function() use ( $post_type ) {
 				register_rest_field( $post_type, 'featured_media_src_url', array(
-				    'get_callback'    => function ( $post ) {
-										return $this->featured_media_src( $post );
-									},
-					'update_callback' => null,
-					'schema'          => null,
+					    'get_callback'    => function ( $post ) {
+											return $this->featured_media_src( $post );
+										},
+						'update_callback' => null,
+						'schema'          => null,
 					) // @codingStandardsIgnoreLine
 				);
 				}, 99
