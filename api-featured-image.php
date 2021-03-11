@@ -11,7 +11,7 @@
  * Plugin Name:       REST API Featured Image
  * Plugin URI:        https://switchwebdev.com/wordpress-plugins/
  * Description:       This plugin will add the featured image src url field to the WordPress Rest API.
- * Version:           0.7.3
+ * Version:           0.7.5
  * Requires at least: 4.7.0
  * Requires PHP:      5.6
  * Author:            Uriel Wilson
