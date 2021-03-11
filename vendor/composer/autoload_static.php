@@ -21,6 +21,7 @@ class ComposerStaticInit8670018b775324be36d7c313e612247e
     );
 
     public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'SimFeaturedMediaSrc\\Admin\\FeaturedMediaSrcAdmin' => __DIR__ . '/../..' . '/src/Admin/FeaturedMediaSrcAdmin.php',
         'SimFeaturedMediaSrc\\WPAdminPage\\AdminPage' => __DIR__ . '/../..' . '/src/WPAdminPage/AdminPage.php',
         'SimFeaturedMediaSrc\\WPAdminPage\\FormHelper' => __DIR__ . '/../..' . '/src/WPAdminPage/FormHelper.php',

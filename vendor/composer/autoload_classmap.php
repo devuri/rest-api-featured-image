@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'SimFeaturedMediaSrc\\Admin\\FeaturedMediaSrcAdmin' => $baseDir . '/src/Admin/FeaturedMediaSrcAdmin.php',
     'SimFeaturedMediaSrc\\WPAdminPage\\AdminPage' => $baseDir . '/src/WPAdminPage/AdminPage.php',
     'SimFeaturedMediaSrc\\WPAdminPage\\FormHelper' => $baseDir . '/src/WPAdminPage/FormHelper.php',
