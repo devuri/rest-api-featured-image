@@ -42,7 +42,7 @@ class addFeaturedImageSrc // @codingStandardsIgnoreLine
 		if ( empty( $this->post_types ) ) {
 			$this->post_types = array( 'post' );
 		}
-		return $this->post_types;
+		return apply_filters('wpfms_post_types', $this->post_types);
 	}
 
 	/**
@@ -53,8 +53,7 @@ class addFeaturedImageSrc // @codingStandardsIgnoreLine
 	 * @link https://developer.wordpress.org/reference/functions/wp_get_attachment_image_src/
 	 */
 	private function get_media( $id = null ) {
-		$featured_image = wp_get_attachment_image_src( $id, $this->image_size );
-		return $featured_image;
+		return wp_get_attachment_image_src( $id, $this->image_size );
 	}
 
 	/**
