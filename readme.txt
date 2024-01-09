@@ -3,8 +3,8 @@ Contributors: icelayer
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6D6W2KXB88NKE
 Tags: rest, rest-api, api, json, featured image, post, thumbnail
 Requires at least: 4.7.0
-Tested up to: 5.7
-Stable tag: 0.7.5
+Tested up to: 6.0
+Stable tag: 0.8.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html

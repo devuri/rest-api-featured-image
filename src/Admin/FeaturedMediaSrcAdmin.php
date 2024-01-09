@@ -50,7 +50,7 @@ final class FeaturedMediaSrcAdmin extends AdminPage {
 	private static function submenu() {
 	  	$menu = array();
 	  	$menu[] = 'Post Types';
-	  	// $menu[] = 'Featured Image Size'; // @codingStandardsIgnoreLine
+	  	// $menu[] = 'Featured Image Size'; // get_intermediate_image_sizes() @codingStandardsIgnoreLine
 	  	return $menu;
 	}
 
