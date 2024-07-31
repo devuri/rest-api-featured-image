@@ -1,16 +1,23 @@
-name: Deploy to WordPress.org
+name: Release 🟢
 on:
-  push:
-    tags:
-    - "*"
+  pull_request:
+    types:
+      - closed
+  workflow_dispatch:
+
 jobs:
-  tag:
-    name: New Release
+  release:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: WordPress Plugin Deploy
-      uses: 10up/action-wordpress-plugin-deploy@stable
-      env:
-        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+      - name: Deploy Release 🟢
+        uses: devuri/plugin-release-deploy-action@main
+        with:
+          php-version: '7.4'
+          node-version: '16'
+          plugin-slug: 'rest-api-featured-image' # WordPress.org plugin slug
+          build-dir: './build/trunk/'
+          zip-file: 'rest-api-featured-image.zip'
+          svn-username: ${{ secrets.SVN_USERNAME }}
+          svn-password: ${{ secrets.SVN_PASSWORD }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          dry-run: 'false' # This optional and defaults to 'false'
