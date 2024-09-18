@@ -1,2 +1,26 @@
+composer.phar
+composer.lock
+.phpunit.cache
+.phpunit.result.cache
+/vendor
+/coverage-report
+/tmp
 /.github
 /.idea
+/.phpdoc/cache
+
+## PLUGIN FILES
+build/svn/
+build/trunk/
+trunk/
+*.zip
+
+## DEV TOOLS
+node_modules/
+tmp/
+asset/dist/
+/asset/mix-manifest.json
+vendor/
+bug/
+report/
+.wp-develop/

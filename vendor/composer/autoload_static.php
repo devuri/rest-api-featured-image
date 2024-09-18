@@ -4,36 +4,36 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8670018b775324be36d7c313e612247e
+class ComposerStaticInit4596a160aebbeba1b448e938cb6cdc01
 {
     public static $prefixLengthsPsr4 = array (
-        'S' => 
+        'A' => 
         array (
-            'SimFeaturedMediaSrc\\' => 20,
+            'APIFeaturedImage\\' => 17,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'SimFeaturedMediaSrc\\' => 
+        'APIFeaturedImage\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
     public static $classMap = array (
+        'APIFeaturedImage\\Admin\\PluginAdmin' => __DIR__ . '/../..' . '/src/Admin/PluginAdmin.php',
+        'APIFeaturedImage\\Plugin' => __DIR__ . '/../..' . '/src/Plugin.php',
+        'APIFeaturedImage\\WPAdminPage\\AdminPage' => __DIR__ . '/../..' . '/src/WPAdminPage/AdminPage.php',
+        'APIFeaturedImage\\WPAdminPage\\FormHelper' => __DIR__ . '/../..' . '/src/WPAdminPage/FormHelper.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'SimFeaturedMediaSrc\\Admin\\FeaturedMediaSrcAdmin' => __DIR__ . '/../..' . '/src/Admin/FeaturedMediaSrcAdmin.php',
-        'SimFeaturedMediaSrc\\WPAdminPage\\AdminPage' => __DIR__ . '/../..' . '/src/WPAdminPage/AdminPage.php',
-        'SimFeaturedMediaSrc\\WPAdminPage\\FormHelper' => __DIR__ . '/../..' . '/src/WPAdminPage/FormHelper.php',
-        'SimFeaturedMediaSrc\\addFeaturedImageSrc' => __DIR__ . '/../..' . '/src/addFeaturedImageSrc.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8670018b775324be36d7c313e612247e::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8670018b775324be36d7c313e612247e::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit8670018b775324be36d7c313e612247e::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit4596a160aebbeba1b448e938cb6cdc01::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit4596a160aebbeba1b448e938cb6cdc01::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit4596a160aebbeba1b448e938cb6cdc01::$classMap;
 
         }, null, ClassLoader::class);
     }

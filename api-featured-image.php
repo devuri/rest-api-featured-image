@@ -1,64 +1,47 @@
 <?php
+
 /**
- * REST API Featured Image
- *
- * @wordpress-plugin
  * Plugin Name:       REST API Featured Image
- * Plugin URI:        https://wpbrisko.com/wordpress-plugins/
+ * Plugin URI:        https://github.com/devuri/rest-api-featured-image
  * Description:       This plugin will add the featured image src url field to the WordPress Rest API.
  * Version:           0.8.4
- * Requires at least: 4.7.0
- * Requires PHP:      5.6
- * Author:            wpbrisko.com
- * Author URI:        https://wpbrisko.com
- * Text Domain:       api-featured-image
- * Domain Path:       languages
+ * Requires at least: 5.3.0
+ * Requires PHP:      7.3.5
+ * Author:            uriel
+ * Author URI:        https://github.com/devuri
+ * Text Domain:       rest-api-featured-image
  * License:           GPLv2
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Network: true.
  */
 
- 	// deny direct access.
-	if ( ! defined( 'WPINC' ) ) {
-		die;
-	}
+if ( ! \defined( 'ABSPATH' ) ) {
+    exit;
+}
 
-	// plugin directory.
-	define( 'APIFI_VERSION', '0.8.4' );
+\define( 'APIFI_VERSION', '0.8.4' );
+\define( 'APIFI_DIR', \dirname( __FILE__ ) );
+\define( 'APIFI_URL', plugins_url( '/', __FILE__ ) );
 
-	// plugin directory.
-	define( 'APIFI_DIR', dirname( __FILE__ ) );
+require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
-	// plugin url.
-	define( 'APIFI_URL', plugins_url( '/', __FILE__ ) );
+/**
+ * Setup options on activation.
+ */
+register_activation_hook( __FILE__, function (): void {
+    update_option( 'wpfms_post_types', [] );
+}
+);
 
-	/**
-	 * Load composer
-	 */
-	require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
-// -----------------------------------------------------------------------------
+APIFeaturedImage\Admin\PluginAdmin::init();
 
-  	/**
-  	 * Setup options on activation
-  	 */
-	register_activation_hook( __FILE__, function () {
-			update_option( 'wpfms_post_types', array() );
-		}
-	);
-
-// -----------------------------------------------------------------------------
-
-	/**
-	 * Setup the admin page
-	 */
-  	SimFeaturedMediaSrc\Admin\FeaturedMediaSrcAdmin::init();
-
-	/**
-	 * Initialize Add_Featured_Image_Src
-	 *
-	 * TODO add option to change the image size for output ('thumbnail', 'medium', 'large' , 'full')
-	 */
- 	(new SimFeaturedMediaSrc\addFeaturedImageSrc(
-		get_option( 'wpfms_post_types', array() ),
-		'large'
-	))->add_src_field();
+/**
+ * Initialize Add_Featured_Image_Src.
+ *
+ * TODO add option to change the image size for output ('thumbnail', 'medium', 'large' , 'full')
+ */
+(new APIFeaturedImage\Plugin(
+    get_option( 'wpfms_post_types', [] ),
+    'large'
+))->add_src_field();
