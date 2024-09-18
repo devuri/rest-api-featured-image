@@ -23,7 +23,7 @@
 	}
 
 	// plugin directory.
-	define( 'APIFI_VERSION', '0.7.1' );
+	define( 'APIFI_VERSION', '0.8.4' );
 
 	// plugin directory.
 	define( 'APIFI_DIR', dirname( __FILE__ ) );
