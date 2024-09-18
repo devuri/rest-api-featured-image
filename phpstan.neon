@@ -1,0 +1,19 @@
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+parameters:
+    bootstrapFiles:
+        - tests/stubs.php
+    tmpDir: tmp
+    level: 5
+    inferPrivatePropertyTypeFromConstructor: true
+    treatPhpDocTypesAsCertain: false
+    excludePaths:
+        - tests/*
+        - tmp/*
+        - node_modules/*
+        - bin/*
+        - vendor/*
+    paths:
+        - src
+        - tests
