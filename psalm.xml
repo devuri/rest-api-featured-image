@@ -9,7 +9,7 @@
 >
     <projectFiles>
         <directory name="src" />
-		<file name="basic-plugin.php" />
+		<file name="api-featured-image.php" />
         <ignoreFiles>
             <directory name="vendor" />
         </ignoreFiles>
@@ -34,7 +34,7 @@
 		<UnresolvableInclude>
 			<errorLevel type="suppress">
   			<directory name="src" />
-  			<file name="basic-plugin.php" />
+  			<file name="api-featured-image.php" />
   		  </errorLevel>
 		</UnresolvableInclude>
 		<MissingReturnType>

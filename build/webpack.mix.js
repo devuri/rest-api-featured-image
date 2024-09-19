@@ -7,6 +7,7 @@ mix.options({ manifest: false })
 // build the plugin files in trunk.
 mix.copy('vendor', 'build/trunk/vendor')
 mix.copy('src', 'build/trunk/src')
+mix.copy('asset', 'build/trunk/asset')
 
 mix.copy([
     'uninstall.php',
