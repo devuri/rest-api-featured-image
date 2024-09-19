@@ -85,6 +85,8 @@ class PostTypesAdmin implements PageInterface
                 return true;
             }
 
+			update_option( APIFI_PT_OPTION, $post_type_names );
+
             echo Form::user_feedback( 'Nothing to Update <strong>No Post Types Have Been Set</strong> !!!', 'warning' );
 
             return false;
