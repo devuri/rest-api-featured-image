@@ -5,7 +5,7 @@ Tags: rest api, featured image, wordpress rest api, featured image url, api perf
 Requires at least: 4.7.0
 Tested up to: 6.6
 Stable tag: 0.8.4
-Requires PHP: 5.6
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 

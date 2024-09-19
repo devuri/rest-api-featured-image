@@ -6,9 +6,24 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'APIFeaturedImage\\Admin\\PluginAdmin' => $baseDir . '/src/Admin/PluginAdmin.php',
+    'APIFeaturedImage\\AbstractPlugin' => $baseDir . '/src/AbstractPlugin.php',
+    'APIFeaturedImage\\Admin' => $baseDir . '/src/Admin.php',
+    'APIFeaturedImage\\Admin\\AbstractAdminCore' => $baseDir . '/src/Admin/AbstractAdminCore.php',
+    'APIFeaturedImage\\Admin\\AdminCoreInterface' => $baseDir . '/src/Admin/AdminCoreInterface.php',
+    'APIFeaturedImage\\Admin\\Form\\Form' => $baseDir . '/src/Admin/Form/Form.php',
+    'APIFeaturedImage\\Admin\\Form\\Traits\\CategoryList' => $baseDir . '/src/Admin/Form/Traits/CategoryList.php',
+    'APIFeaturedImage\\Admin\\Form\\Traits\\DataList' => $baseDir . '/src/Admin/Form/Traits/DataList.php',
+    'APIFeaturedImage\\Admin\\Form\\Traits\\Image' => $baseDir . '/src/Admin/Form/Traits/Image.php',
+    'APIFeaturedImage\\Admin\\Form\\Traits\\Input' => $baseDir . '/src/Admin/Form/Traits/Input.php',
+    'APIFeaturedImage\\Admin\\Form\\Traits\\Nonce' => $baseDir . '/src/Admin/Form/Traits/Nonce.php',
+    'APIFeaturedImage\\Admin\\Form\\Traits\\PostType' => $baseDir . '/src/Admin/Form/Traits/PostType.php',
+    'APIFeaturedImage\\Admin\\Form\\Traits\\Select' => $baseDir . '/src/Admin/Form/Traits/Select.php',
+    'APIFeaturedImage\\Admin\\Form\\Traits\\TextArea' => $baseDir . '/src/Admin/Form/Traits/TextArea.php',
+    'APIFeaturedImage\\Admin\\PageInterface' => $baseDir . '/src/Admin/PageInterface.php',
+    'APIFeaturedImage\\Admin\\Pages\\FeaturedMediaAdmin' => $baseDir . '/src/Admin/Pages/FeaturedMediaAdmin.php',
+    'APIFeaturedImage\\Admin\\Pages\\PostTypesAdmin' => $baseDir . '/src/Admin/Pages/PostTypesAdmin.php',
+    'APIFeaturedImage\\Admin\\Validate' => $baseDir . '/src/Admin/Validate.php',
     'APIFeaturedImage\\Plugin' => $baseDir . '/src/Plugin.php',
-    'APIFeaturedImage\\WPAdminPage\\AdminPage' => $baseDir . '/src/WPAdminPage/AdminPage.php',
-    'APIFeaturedImage\\WPAdminPage\\FormHelper' => $baseDir . '/src/WPAdminPage/FormHelper.php',
+    'APIFeaturedImage\\PluginInterface' => $baseDir . '/src/PluginInterface.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );

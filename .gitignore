@@ -18,7 +18,6 @@ trunk/
 ## DEV TOOLS
 node_modules/
 tmp/
-asset/dist/
 /asset/mix-manifest.json
 vendor/
 bug/

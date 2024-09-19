@@ -21,10 +21,25 @@ class ComposerStaticInit4596a160aebbeba1b448e938cb6cdc01
     );
 
     public static $classMap = array (
-        'APIFeaturedImage\\Admin\\PluginAdmin' => __DIR__ . '/../..' . '/src/Admin/PluginAdmin.php',
+        'APIFeaturedImage\\AbstractPlugin' => __DIR__ . '/../..' . '/src/AbstractPlugin.php',
+        'APIFeaturedImage\\Admin' => __DIR__ . '/../..' . '/src/Admin.php',
+        'APIFeaturedImage\\Admin\\AbstractAdminCore' => __DIR__ . '/../..' . '/src/Admin/AbstractAdminCore.php',
+        'APIFeaturedImage\\Admin\\AdminCoreInterface' => __DIR__ . '/../..' . '/src/Admin/AdminCoreInterface.php',
+        'APIFeaturedImage\\Admin\\Form\\Form' => __DIR__ . '/../..' . '/src/Admin/Form/Form.php',
+        'APIFeaturedImage\\Admin\\Form\\Traits\\CategoryList' => __DIR__ . '/../..' . '/src/Admin/Form/Traits/CategoryList.php',
+        'APIFeaturedImage\\Admin\\Form\\Traits\\DataList' => __DIR__ . '/../..' . '/src/Admin/Form/Traits/DataList.php',
+        'APIFeaturedImage\\Admin\\Form\\Traits\\Image' => __DIR__ . '/../..' . '/src/Admin/Form/Traits/Image.php',
+        'APIFeaturedImage\\Admin\\Form\\Traits\\Input' => __DIR__ . '/../..' . '/src/Admin/Form/Traits/Input.php',
+        'APIFeaturedImage\\Admin\\Form\\Traits\\Nonce' => __DIR__ . '/../..' . '/src/Admin/Form/Traits/Nonce.php',
+        'APIFeaturedImage\\Admin\\Form\\Traits\\PostType' => __DIR__ . '/../..' . '/src/Admin/Form/Traits/PostType.php',
+        'APIFeaturedImage\\Admin\\Form\\Traits\\Select' => __DIR__ . '/../..' . '/src/Admin/Form/Traits/Select.php',
+        'APIFeaturedImage\\Admin\\Form\\Traits\\TextArea' => __DIR__ . '/../..' . '/src/Admin/Form/Traits/TextArea.php',
+        'APIFeaturedImage\\Admin\\PageInterface' => __DIR__ . '/../..' . '/src/Admin/PageInterface.php',
+        'APIFeaturedImage\\Admin\\Pages\\FeaturedMediaAdmin' => __DIR__ . '/../..' . '/src/Admin/Pages/FeaturedMediaAdmin.php',
+        'APIFeaturedImage\\Admin\\Pages\\PostTypesAdmin' => __DIR__ . '/../..' . '/src/Admin/Pages/PostTypesAdmin.php',
+        'APIFeaturedImage\\Admin\\Validate' => __DIR__ . '/../..' . '/src/Admin/Validate.php',
         'APIFeaturedImage\\Plugin' => __DIR__ . '/../..' . '/src/Plugin.php',
-        'APIFeaturedImage\\WPAdminPage\\AdminPage' => __DIR__ . '/../..' . '/src/WPAdminPage/AdminPage.php',
-        'APIFeaturedImage\\WPAdminPage\\FormHelper' => __DIR__ . '/../..' . '/src/WPAdminPage/FormHelper.php',
+        'APIFeaturedImage\\PluginInterface' => __DIR__ . '/../..' . '/src/PluginInterface.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
