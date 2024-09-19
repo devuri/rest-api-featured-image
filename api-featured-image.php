@@ -6,7 +6,7 @@
  * Description:       This plugin will add the featured image src url field to the WordPress Rest API.
  * Version:           0.8.4
  * Requires at least: 5.3.0
- * Requires PHP:      7.3.5
+ * Requires PHP:      7.4
  * Author:            uriel
  * Author URI:        https://github.com/devuri
  * Text Domain:       rest-api-featured-image

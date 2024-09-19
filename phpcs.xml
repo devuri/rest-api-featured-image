@@ -88,5 +88,5 @@
 	</rule>
 
 	<rule ref="PHPCompatibilityWP" />
-	<config name="testVersion" value="7.3-"/>
+	<config name="testVersion" value="7.4-"/>
 </ruleset>

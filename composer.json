@@ -74,7 +74,7 @@
         ],
         "php-compat": [
             "composer install",
-            "vendor/bin/phpcs api-featured-image.php src/ --standard=PHPCompatibilityWP --extensions=php --runtime-set testVersion 7.3-"
+            "vendor/bin/phpcs api-featured-image.php src/ --standard=PHPCompatibilityWP --extensions=php --runtime-set testVersion 7.4-"
         ],
         "psalm-info": "vendor/bin/psalm --show-info=true",
         "psalm-secure": "vendor/bin/psalm --taint-analysis",
