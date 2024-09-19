@@ -4,7 +4,7 @@
  * Plugin Name:       REST API Featured Image
  * Plugin URI:        https://github.com/devuri/rest-api-featured-image
  * Description:       This plugin will add the featured image src url field to the WordPress Rest API.
- * Version:           0.8.4
+ * Version:           0.9.0
  * Requires at least: 5.3.0
  * Requires PHP:      7.4
  * Author:            uriel
@@ -19,7 +19,7 @@ if ( ! \defined( 'ABSPATH' ) ) {
     exit;
 }
 
-\define( 'APIFI_VERSION', '0.8.4' );
+\define( 'APIFI_VERSION', '0.9.0' );
 \define( 'APIFI_DIR', \dirname( __FILE__ ) );
 \define( 'APIFI_URL', plugins_url( '/', __FILE__ ) );
 \define( 'APIFI_PT_OPTION', 'wpfms_post_types' );
