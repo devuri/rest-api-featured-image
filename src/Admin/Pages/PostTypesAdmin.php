@@ -80,7 +80,7 @@ class PostTypesAdmin implements PageInterface
                 }
 
                 update_option( APIFI_PT_OPTION, $post_type_names );
-                Form::user_feedback( 'Post Types Have Been Updated !!!' );
+                echo Form::user_feedback( 'Post Types Have Been Updated !!!' );
 
                 return true;
             }
