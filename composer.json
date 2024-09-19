@@ -26,7 +26,7 @@
         "vimeo/psalm": "^5.25",
         "yoast/phpunit-polyfills": "^3.0"
     },
-	"autoload": {
+    "autoload": {
         "psr-4": {
             "APIFeaturedImage\\": "src/"
         }
