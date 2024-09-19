@@ -160,7 +160,7 @@ trait Input
     /**
      * Get the ID.
      *
-     * @param mixed      $name
+     * @param string      $name
      * @param null|mixed $label
      * @param mixed      $description
      */
@@ -281,7 +281,7 @@ trait Input
      *
      * @param ?string $button
      *
-     * @return [type]          [description]
+     * @return null|string
      */
     protected static function input_button( ?string $button ): ?string
     {

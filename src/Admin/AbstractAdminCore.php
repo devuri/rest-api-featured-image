@@ -422,7 +422,7 @@ abstract class AbstractAdminCore implements AdminCoreInterface
             return $this->page_current_screen;
         }
 
-        $screen = static::get_screen();
+        $screen = self::get_screen();
 
         $id_page_name = explode( '_', $screen->id );
         $current_page = $id_page_name[2];

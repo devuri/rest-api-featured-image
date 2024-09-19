@@ -85,7 +85,6 @@ class Form
      * set field as required, defaults to false.
      * Also used for input description since we pass back the value as output.
      *
-     * @param bool  $required
      * @param mixed $description_info
      *
      * @return null|string

@@ -37,8 +37,6 @@ class Validate
          * 1 if the nonce is valid and generated between 0-12 hours ago,
          * 2 if the nonce is valid and generated between 12-24 hours ago.
          * False if the nonce is invalid.
-         *
-         * @var false|int.
          */
         $validate = check_admin_referer( $action, $nonce );
         if ( 1 === $validate ) {

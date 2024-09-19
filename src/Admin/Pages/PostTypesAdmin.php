@@ -72,6 +72,8 @@ class PostTypesAdmin implements PageInterface
                 wp_die();
             }
 
+			$post_type_names = [];
+
             if ( isset( $_post['post_type_names'] ) ) {
                 foreach ( $_post['post_type_names'] as $key => $post_type ) {
                     $post_type_names[ $key ] = sanitize_text_field( $post_type );

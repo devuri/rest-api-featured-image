@@ -9,16 +9,6 @@ class Plugin extends AbstractPlugin
 {
     protected static $version = '4.0.21';
     protected static $prefix  = 'apfms';
-    /**
-     * Set the featured image size.
-     *
-     * 'thumbnail'  Thumbnail (Note: different to Post Thumbnail)
-     * 'medium'     Medium resolution
-     * 'large'      Large resolution
-     * 'full'       Original resolution
-     *
-     * @var string
-     */
     private $image_size;
 
     /**

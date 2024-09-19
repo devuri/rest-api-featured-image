@@ -55,16 +55,12 @@ interface AdminCoreInterface
      *
      * @param object $instance The instance of the current class (AdminCore).
      *
-     * @return
+     * @return void
      */
     public static function admin_notice_section( $instance ): void;
 
     /**
      * Display notice section.
-     *
-     * @param bool $display
-     *
-     * @return
      */
     public function notice_section_banner();
 
@@ -106,11 +102,11 @@ interface AdminCoreInterface
     /**
      * Get the Page.
      *
-     * @return string
+     * @return null|string
      *
      * @since 1.0
      */
-    public function current_page_title(): string;
+    public function current_page_title(): ?string;
 
     /**
      * The main callback should be implemented by child class.
@@ -156,7 +152,7 @@ interface AdminCoreInterface
      * Return the correct submenu value.
      *
      * @param mixed $key
-     * @param mixed $submenus
+     * @param array $submenus
      *
      * @return string
      */
@@ -165,16 +161,16 @@ interface AdminCoreInterface
     /**
      * Set submenu capability.
      *
-     * @param string the submenu item key.
+     * @param null|string $subkey the submenu item key.
      */
     public function sub_capability( ?string $subkey = null ): ?string;
 
     /**
      * Get child submenu items.
      *
-     * @return array
+     * @return null|array
      */
-    public function get_child(): array;
+    public function get_child(): ?array;
 
     /**
      * Asset url.

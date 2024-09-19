@@ -25,7 +25,7 @@ trait PostType
     /**
      * @return null|array
      *
-     * @psalm-return array<int, mixed>|null
+     * @psalm-return array<string, mixed>|null
      */
     public static function post_type_list(): ?array
     {
