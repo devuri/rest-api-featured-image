@@ -3,7 +3,7 @@ Contributors: icelayer
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6D6W2KXB88NKE
 Tags: rest api, featured image, wordpress rest api, featured image url, api performance, json, post thumbnail
 Requires at least: 4.7.0
-Tested up to: 6.6
+Tested up to: 6.8
 Stable tag: 0.9.0
 Requires PHP: 7.4
 License: GPLv2 or later

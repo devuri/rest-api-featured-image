@@ -40,6 +40,7 @@ class ComposerStaticInit4596a160aebbeba1b448e938cb6cdc01
         'APIFeaturedImage\\Admin\\Validate' => __DIR__ . '/../..' . '/src/Admin/Validate.php',
         'APIFeaturedImage\\Plugin' => __DIR__ . '/../..' . '/src/Plugin.php',
         'APIFeaturedImage\\PluginInterface' => __DIR__ . '/../..' . '/src/PluginInterface.php',
+        'APIFeaturedImage\\RestRegister' => __DIR__ . '/../..' . '/src/RestRegister.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 

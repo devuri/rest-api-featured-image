@@ -25,5 +25,6 @@ return array(
     'APIFeaturedImage\\Admin\\Validate' => $baseDir . '/src/Admin/Validate.php',
     'APIFeaturedImage\\Plugin' => $baseDir . '/src/Plugin.php',
     'APIFeaturedImage\\PluginInterface' => $baseDir . '/src/PluginInterface.php',
+    'APIFeaturedImage\\RestRegister' => $baseDir . '/src/RestRegister.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );
