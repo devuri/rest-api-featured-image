@@ -23,7 +23,7 @@ class RestRegister
             $this->fieldID,
             [
                 'get_callback'    => function ( $post_object ) use ($postType) {
-                    return $this->getFeaturedMediaSrc( $post_object );
+                    return $this->getFeaturedMediaSrc( $post_object, $postType );
                 },
                 'update_callback' => null,
                 'schema'          => null,
@@ -34,7 +34,7 @@ class RestRegister
     /**
      * If the post type is not set (empty array()) just use post.
      */
-    public function getPostTypes(): array
+    public function getPostTypes(): ?array
     {
         if ( empty( $this->postTypes ) ) {
             $this->postTypes = [ 'post' ];
@@ -55,9 +55,10 @@ class RestRegister
      * Featured media src
      * check if there is featured_media and if not return null.
      *
-     * @param object $post the post data.
+     * @param object $post     the post data.
+     * @param string $postType the post data.
      */
-    protected function getFeaturedMediaSrc( $post = null )
+    protected function getFeaturedMediaSrc( $post = null, ?string $postType = null )
     {
         $media = \array_key_exists( 'featured_media', $post );
 

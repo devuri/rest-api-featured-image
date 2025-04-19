@@ -66,7 +66,7 @@ abstract class AbstractAdminCore implements AdminCoreInterface
     /**
      * @return static
      */
-    public function set_submenus( ?array $submenus = null ): self
+    public function set_submenus( ?array $submenus = null ): AdminCoreInterface
     {
         if ( ! empty( $submenus ) && \is_array( $submenus ) ) {
             if ( ! $this->is_frontend || is_admin() ) {
