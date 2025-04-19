@@ -34,7 +34,5 @@ register_activation_hook(
 
 APIFeaturedImage\Plugin::init( plugin_dir_path( __FILE__ ), plugin_dir_url( __FILE__ ) )
     ->registerAdmin()
-    // TODO add option to change the image size for output ('thumbnail', 'medium', 'large' , 'full')
-    ->setMediaSize( 'large' )
     ->setPostTypes( get_option( APIFI_PT_OPTION, [] ) )
-    ->addSrcField();
+    ->registerEndpoint('large');

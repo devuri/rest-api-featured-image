@@ -72,7 +72,7 @@ class PostTypesAdmin implements PageInterface
                 wp_die();
             }
 
-			$post_type_names = [];
+            $post_type_names = [];
 
             if ( isset( $_post['post_type_names'] ) ) {
                 foreach ( $_post['post_type_names'] as $key => $post_type ) {
@@ -85,7 +85,7 @@ class PostTypesAdmin implements PageInterface
                 return true;
             }
 
-			update_option( APIFI_PT_OPTION, $post_type_names );
+            update_option( APIFI_PT_OPTION, $post_type_names );
 
             echo Form::user_feedback( 'Nothing to Update <strong>No Post Types Have Been Set</strong> !!!', 'warning' );
 

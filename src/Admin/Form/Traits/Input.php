@@ -160,7 +160,7 @@ trait Input
     /**
      * Get the ID.
      *
-     * @param string      $name
+     * @param string     $name
      * @param null|mixed $label
      * @param mixed      $description
      */
