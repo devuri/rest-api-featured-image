@@ -7,7 +7,6 @@ use APIFeaturedImage\Admin\Pages\PostTypesAdmin;
 
 class Plugin extends AbstractPlugin
 {
-    protected static $version = '0.9.0';
     protected static $prefix  = 'apfms';
     private ?string $image_size;
     private ?array $post_types;
