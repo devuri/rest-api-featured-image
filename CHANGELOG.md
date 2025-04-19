@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.9.1](https://github.com/devuri/rest-api-featured-image/compare/0.9.0...0.9.1) (2025-04-19)
+
+
+### Bug Fixes
+
+* update media isset fix ([81c5bab](https://github.com/devuri/rest-api-featured-image/commit/81c5babf4bc3c5b77cb4d3440544d5f55a24110c))
+* update media isset fix ([b0f6c57](https://github.com/devuri/rest-api-featured-image/commit/b0f6c579cf27cea0a6fa2393def8e10a2230620c))
+
+
+### Miscellaneous Chores
+
+* version bump `0.9.1` ([f55b154](https://github.com/devuri/rest-api-featured-image/commit/f55b1545d66cf8c0d6cabb7e5e46aef88fa5226d))
+* version bump `0.9.1` ([1868bc2](https://github.com/devuri/rest-api-featured-image/commit/1868bc26579dfdc09ca86623e26fbb7e474b10c7))
+
 ## [0.9.0](https://github.com/devuri/rest-api-featured-image/compare/v0.8.3...0.9.0) (2024-09-19)
 
 
