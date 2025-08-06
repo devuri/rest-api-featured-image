@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: rest api, featured image, wordpress rest api, featured image url, api performance, json, post thumbnail
 Requires at least: 4.7.0
 Tested up to: 6.8
-Stable tag: 0.9.1
+Stable tag: 0.9.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html

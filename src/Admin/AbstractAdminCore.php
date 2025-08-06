@@ -133,6 +133,27 @@ abstract class AbstractAdminCore implements AdminCoreInterface
     }
 
     /**
+     * Checks if a specific query variable is set in the global WordPress query object.
+     *
+     * This function examines the global `$wp_query` object to determine if the specified query variable
+     * exists. It's commonly used to verify the presence of custom query variables in WordPress query context.
+     *
+     * @param string $query_var The name of the query variable to check.
+     *
+     * @return bool Returns true if the query variable is set, false otherwise.
+     */
+    public function isset_query_var( string $query_var ): bool
+    {
+        global $wp_query;
+
+        if ( isset( $wp_query->query_vars[ $query_var ] ) ) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
      * @param mixed $is_network
      *
      * @return static
@@ -154,6 +175,10 @@ abstract class AbstractAdminCore implements AdminCoreInterface
         add_action(
             'wp_enqueue_scripts',
             function (): void {
+                if ( ! $this->isset_query_var( 'evp_frontend_dashboard' ) && $this->is_frontend || ! is_admin()) {
+                    return;
+                }
+
                 wp_enqueue_style( $this->style_scripts['admin'] );
                 wp_enqueue_style( $this->style_scripts['dashboard_admin'] );
                 wp_enqueue_style( $this->style_scripts['litycss'] );
