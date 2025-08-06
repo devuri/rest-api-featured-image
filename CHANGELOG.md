@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.2](https://github.com/devuri/rest-api-featured-image/compare/0.9.1...0.9.2) (2025-08-06)
+
+
+### Bug Fixes
+
+* css frontend styles fixed ([1775691](https://github.com/devuri/rest-api-featured-image/commit/1775691e4c84080ba47b55dfa8a98a8119c38d7c))
+* css frontend styles fixed ([f98a186](https://github.com/devuri/rest-api-featured-image/commit/f98a186a0e03a2c818a7ccbe069c1910b32d0f36))
+
 ## [0.9.1](https://github.com/devuri/rest-api-featured-image/compare/0.9.0...0.9.1) (2025-04-19)
 
 
